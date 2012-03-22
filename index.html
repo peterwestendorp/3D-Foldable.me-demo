@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Create your Foldable.Me</title>
+    <link href="stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <meta name="description" content="Foldables are your customisable cardboard friend. You choose what he or she looks like on the Foldable.Me website. Then we'll send him on a postal journey straight to your front door, wherever in world that might be." />
+    <script>
+      document.documentElement.className+=' js';
+      // browser detection needed for anti-alias fix that breaks rendering in webkit (http://stackoverflow.com/questions/9235342/3d-css-transform-jagged-edges-in-firefox)
+      if(/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)){
+        document.documentElement.className+=' firefox';
+      }
+    </script>
+  </head>
+
+  <body class="hipsters" id="hipsters-new">
+    <div id="page">
+      <div id="site-body">
+        <div class="main column">
+          <div class="configurator">
+            <form accept-charset="UTF-8" action="/foldables/preview" class="body-parts" id="new_hipster" method="post">
+              <div class="selector-holder">
+                <ul class="body-parts-selector">
+                  <li data-part-name="skin" class='active skin'>
+                    <a class="category">skin</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Skin" src="images/hipster-assets/skin-01-thumb.png" title="Skin" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#ecbe88">
+                                <input checked="checked" data-part-type="skin" data-source-url="images/hipster-assets/skin-01-tanned.png" name="hipster[skin_id]" type="radio" value="376" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#ae8955">
+                                <input data-part-type="skin" data-source-url="images/hipster-assets/skin-01-dark.png" name="hipster[skin_id]" type="radio" value="378" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#f3d2b2">
+                                <input data-part-type="skin" data-source-url="images/hipster-assets/skin-01-light.png" name="hipster[skin_id]" type="radio" value="380" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-part-name="face" class="face">
+                    <a class="category">face</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Face 1" src="images/hipster-assets/face-shape-01-thumb.png" title="Face 1" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:transparent">
+                                <input checked="checked" data-part-type="face" data-source-url="images/hipster-assets/face-shape-01.png" name="hipster[face_id]" type="radio" value="336" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Face 2" src="images/hipster-assets/face-shape-02-thumb.png" title="Face 2" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:transparent">
+                                <input data-part-type="face" data-source-url="images/hipster-assets/face-shape-02.png" name="hipster[face_id]" type="radio" value="338" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Face 3" src="images/hipster-assets/face-shape-03-thumb.png" title="Face 3" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:transparent">
+                                <input data-part-type="face" data-source-url="images/hipster-assets/face-shape-03.png" name="hipster[face_id]" type="radio" value="340" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Face 4" src="images/hipster-assets/face-shape-04-thumb.png" title="Face 4" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:transparent">
+                                <input data-part-type="face" data-source-url="images/hipster-assets/face-shape-04.png" name="hipster[face_id]" type="radio" value="342" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-part-name="eye" class="eye" >
+                    <a class="category">eye</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Eye 1" src="images/hipster-assets/eyes-01-thumb.png" title="Eye 1" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-01-black.png" name="hipster[eye_id]" type="radio" value="252" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#00AEEF">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-01-blue.png" name="hipster[eye_id]" type="radio" value="254" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#754C29">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-01-brown.png" name="hipster[eye_id]" type="radio" value="256" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#8DC63F">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-01-green.png" name="hipster[eye_id]" type="radio" value="258" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Eye 2" src="images/hipster-assets/eyes-02-thumb.png" title="Eye 2" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-02.png" name="hipster[eye_id]" type="radio" value="260" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Eye 3" src="images/hipster-assets/eyes-03-thumb.png" title="Eye 3" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-03-black.png" name="hipster[eye_id]" type="radio" value="262" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#00AEEF">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-03-blue.png" name="hipster[eye_id]" type="radio" value="264" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#754C29">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-03-brown.png" name="hipster[eye_id]" type="radio" value="266" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#8DC63F">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-03-green.png" name="hipster[eye_id]" type="radio" value="268" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Eye 4" src="images/hipster-assets/eyes-04-thumb.png" title="Eye 4" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-04-black.png" name="hipster[eye_id]" type="radio" value="294" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#00AEEF">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-04-blue.png" name="hipster[eye_id]" type="radio" value="296" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#754C29">
+                                <input checked="checked" data-part-type="eye" data-source-url="images/hipster-assets/eyes-04-brown.png" name="hipster[eye_id]" type="radio" value="298" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#8DC63F">
+                                <input data-part-type="eye" data-source-url="images/hipster-assets/eyes-04-green.png" name="hipster[eye_id]" type="radio" value="300" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-part-name="hair" class="hair">
+                    <a class="category">hair</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Hair 2" src="images/hipster-assets/hair-02-thumb.png" title="Hair 2" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-02-black.png" name="hipster[hair_id]" type="radio" value="456" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#fff200">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-02-blond.png" name="hipster[hair_id]" type="radio" value="458" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#3c2415">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-02-brown.png" name="hipster[hair_id]" type="radio" value="460" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#f7941e">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-02-ginger.png" name="hipster[hair_id]" type="radio" value="462" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Hair 3" src="images/hipster-assets/hair-03-thumb.png" title="Hair 3" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-03-black.png" name="hipster[hair_id]" type="radio" value="464" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#fff200">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-03-blond.png" name="hipster[hair_id]" type="radio" value="466" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#3c2415">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-03-brown.png" name="hipster[hair_id]" type="radio" value="468" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#f7941e">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-03-ginger.png" name="hipster[hair_id]" type="radio" value="470" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Hair 4" src="images/hipster-assets/hair-04-thumb.png" title="Hair 4" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-04-black.png" name="hipster[hair_id]" type="radio" value="472" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#fff200">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-04-blond.png" name="hipster[hair_id]" type="radio" value="474" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#3c2415">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-04-brown.png" name="hipster[hair_id]" type="radio" value="476" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#f7941e">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-04-ginger.png" name="hipster[hair_id]" type="radio" value="478" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Hair 6" src="images/hipster-assets/hair-06-thumb.png" title="Hair 6" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input checked="checked" data-part-type="hair" data-source-url="images/hipster-assets/hair-06-black.png" name="hipster[hair_id]" type="radio" value="488" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#fff200">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-06-blond.png" name="hipster[hair_id]" type="radio" value="490" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#3c2415">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-06-brown.png" name="hipster[hair_id]" type="radio" value="492" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#f7941e">
+                                <input data-part-type="hair" data-source-url="images/hipster-assets/hair-06-ginger.png" name="hipster[hair_id]" type="radio" value="494" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-part-name="eyebrow" class="eyebrow">
+                    <a class="category">eyebrow</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Eyebrow 1" src="images/hipster-assets/eyebrows-01-thumb.png" title="Eyebrow 1" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-01-black.png" name="hipster[eyebrow_id]" type="radio" value="98" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#FFF200">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-01-blond.png" name="hipster[eyebrow_id]" type="radio" value="100" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#603913">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-01-brown.png" name="hipster[eyebrow_id]" type="radio" value="102" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#F7941E">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-01-ginger.png" name="hipster[eyebrow_id]" type="radio" value="104" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Eyebrow 3" src="images/hipster-assets/eyebrows-03-thumb.png" title="Eyebrow 3" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-03-black.png" name="hipster[eyebrow_id]" type="radio" value="114" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#FFF200">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-03-blond.png" name="hipster[eyebrow_id]" type="radio" value="116" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#603913">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-03-brown.png" name="hipster[eyebrow_id]" type="radio" value="118" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#F7941E">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-03-ginger.png" name="hipster[eyebrow_id]" type="radio" value="120" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Eyebrow 4" src="images/hipster-assets/eyebrows-04-thumb.png" title="Eyebrow 4" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-04-black.png" name="hipster[eyebrow_id]" type="radio" value="122" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#FFF200">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-04-blond.png" name="hipster[eyebrow_id]" type="radio" value="124" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#603913">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-04-brown.png" name="hipster[eyebrow_id]" type="radio" value="126" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#F7941E">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-04-ginger.png" name="hipster[eyebrow_id]" type="radio" value="128" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Eyebrow 11" src="images/hipster-assets/eyebrows-11-thumb.png" title="Eyebrow 11" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input checked="checked" data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-11-black.png" name="hipster[eyebrow_id]" type="radio" value="178" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#FFF200">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-11-blond.png" name="hipster[eyebrow_id]" type="radio" value="180" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#603913">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-11-brown.png" name="hipster[eyebrow_id]" type="radio" value="182" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#F7941E">
+                                <input data-part-type="eyebrow" data-source-url="images/hipster-assets/eyebrows-11-ginger.png" name="hipster[eyebrow_id]" type="radio" value="184" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-part-name="nose" class="nose">
+                    <a class="category">nose</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Nose 1" src="images/hipster-assets/nose-01-thumb.png" title="Nose 1" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:transparent">
+                                <input data-part-type="nose" data-source-url="images/hipster-assets/nose-01.png" name="hipster[nose_id]" type="radio" value="438" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Nose 2" src="images/hipster-assets/nose-02-thumb.png" title="Nose 2" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:transparent">
+                                <input data-part-type="nose" data-source-url="images/hipster-assets/nose-02.png" name="hipster[nose_id]" type="radio" value="440" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Nose 3" src="images/hipster-assets/nose-03-thumb.png" title="Nose 3" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:transparent">
+                                <input data-part-type="nose" data-source-url="images/hipster-assets/nose-03.png" name="hipster[nose_id]" type="radio" value="442" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Nose 4" src="images/hipster-assets/nose-04-thumb.png" title="Nose 4" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:transparent">
+                                <input checked="checked" data-part-type="nose" data-source-url="images/hipster-assets/nose-04.png" name="hipster[nose_id]" type="radio" value="444" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-part-name="mouth" class="mouth">
+                    <a class="category">mouth</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Mouth 2" src="images/hipster-assets/mouth-02-thumb.png" title="Mouth 2" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#CD8C6F">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-02-pale.png" name="hipster[mouth_id]" type="radio" value="384" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#EE209A">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-02-fuchsia.png" name="hipster[mouth_id]" type="radio" value="386" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#F36F44">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-02-pink.png" name="hipster[mouth_id]" type="radio" value="388" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#C63A47">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-02-purple.png" name="hipster[mouth_id]" type="radio" value="390" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Mouth 3" src="images/hipster-assets/mouth-03-thumb.png" title="Mouth 3" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#CD8C6F">
+                                <input checked="checked" data-part-type="mouth" data-source-url="images/hipster-assets/mouth-03.png" name="hipster[mouth_id]" type="radio" value="392" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Mouth 6" src="images/hipster-assets/mouth-06-thumb.png" title="Mouth 6" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#CD8C6F">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-06-pale.png" name="hipster[mouth_id]" type="radio" value="404" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#EE209A">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-06-fuchsia.png" name="hipster[mouth_id]" type="radio" value="406" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#F36F44">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-06-pink.png" name="hipster[mouth_id]" type="radio" value="408" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#C63A47">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-06-purple.png" name="hipster[mouth_id]" type="radio" value="410" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Mouth 9" src="images/hipster-assets/mouth-09-thumb.png" title="Mouth 9" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#CD8C6F">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-09-pale.png" name="hipster[mouth_id]" type="radio" value="416" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#EE209A">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-09-fuchsia.png" name="hipster[mouth_id]" type="radio" value="418" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#F36F44">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-09-pink.png" name="hipster[mouth_id]" type="radio" value="420" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#C63A47">
+                                <input data-part-type="mouth" data-source-url="images/hipster-assets/mouth-09-purple.png" name="hipster[mouth_id]" type="radio" value="422" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-part-name="facialhair" class="facialhair">
+                    <a class="category">facialhair</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Facial Hair 1" src="images/hipster-assets/facial-hair-01-thumb.png" title="Facial Hair 1" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#CCCCCC">
+                                <input checked="checked" data-part-type="facialhair" data-source-url="images/hipster-assets/facial-hair-01.png" name="hipster[facial_hair_id]" type="radio" value="344" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Facial Hair 3" src="images/hipster-assets/facial-hair-03-thumb.png" title="Facial Hair 3" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="facialhair" data-source-url="images/hipster-assets/facial-hair-03.png" name="hipster[facial_hair_id]" type="radio" value="348" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Facial Hair 5" src="images/hipster-assets/facial-hair-05-thumb.png" title="Facial Hair 5" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="facialhair" data-source-url="images/hipster-assets/facial-hair-05.png" name="hipster[facial_hair_id]" type="radio" value="352" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Facial Hair 14" src="images/hipster-assets/facial-hair-14-thumb.png" title="Facial Hair 14" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="facialhair" data-source-url="images/hipster-assets/facial-hair-14.png" name="hipster[facial_hair_id]" type="radio" value="370" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="none" src="images/hipster-assets/none-thumb.png" title="none" />
+                        <ul class="part-colors">
+                          <li>
+                            <label style="background-color:transparent">
+                              <input data-part-type="facialhair" data-source-url="" name="hipster[facialhair_id]" type="radio" value="286" />
+                            </label>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="scroll-control">
+                  <a href="/" class="down">down</a>
+                  <a href="/" class="up">up</a>
+                </div>
+                <div class="color-holder"></div>
+              </div>
+
+              <div class="hipster-holder">
+                <div class="hipster-preview">
+                  <div class="hipster front">
+                    <div id="hipster-head" class="cube">
+                      <div class="surface top" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="hair" style="background-image:url(images/hipster-assets/hair-06-black.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface front" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="face" style="background-image:url(images/hipster-assets/face-shape-01.png);"></li>
+                          <li class="eye" style="background-image:url(images/hipster-assets/eyes-04-black.png);"></li>
+                          <li class="eyebrow" style="background-image:url(images/hipster-assets/eyebrows-11-black.png);"></li>
+                          <li class="facialhair" style="background-image:url(images/hipster-assets/facial-hair-01.png);"></li>
+                          <li class="mouth" style="background-image:url(images/hipster-assets/mouth-03.png);"></li>
+                          <li class="nose" style="background-image:url(images/hipster-assets/nose-04.png);"></li>
+                          <li class="eyewear" style="background-image:url(images/hipster-assets/eyewear-01-grey.png);"></li>
+                          <li class="hair" style="background-image:url(images/hipster-assets/hair-06-black.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface right" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="hair" style="background-image:url(images/hipster-assets/hair-06-black.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface back" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="hair" style="background-image:url(images/hipster-assets/hair-06-black.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface left" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="hair" style="background-image:url(images/hipster-assets/hair-06-black.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface bottom" style="background-image:url(images/hipster-assets/skin-01-tanned.png);"></div>
+                    </div>
+
+                    <div id="hipster-body" class="cube">
+                      <div class="surface top" style="background-image:url(images/hipster-assets/skin-01-tanned.png);"></div>
+                      <div class="surface front" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface right" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface back" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface left" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface bottom" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div id="hipster-arm-left" class="cube">
+                      <div class="surface top" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface front" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface right" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface back" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface left" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface bottom" style="background-image:url(images/hipster-assets/skin-01-tanned.png);"></div>
+                    </div>
+
+                    <div id="hipster-arm-right" class="cube">
+                      <div class="surface top" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface front" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface right" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface back" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface left" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="shirt" style="background-image:url(images/hipster-assets/shirt-05-white.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface bottom" style="background-image:url(images/hipster-assets/skin-01-tanned.png);"></div>
+                    </div>
+
+                    <div id="hipster-feet" class="cube">
+                      <div class="surface top" style="background-image:url(images/hipster-assets/skin-01-tanned.png);"></div>
+                      <div class="surface front" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="trousers" style="background-image:url(images/hipster-assets/trousers-01-green.png);"></li>
+                          <li class="footwear" style="background-image:url(images/hipster-assets/shoes-01-black.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface right" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="trousers" style="background-image:url(images/hipster-assets/trousers-01-green.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface back" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="trousers" style="background-image:url(images/hipster-assets/trousers-01-green.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface left" style="background-image:url(images/hipster-assets/skin-01-tanned.png);">
+                        <ul>
+                          <li class="trousers" style="background-image:url(images/hipster-assets/trousers-01-green.png);"></li>
+                        </ul>
+                      </div>
+                      <div class="surface bottom" style="background:transparent;"></div>
+                    </div>
+                  </div>
+                  <p class="instructions">use arrow keys to rotate</p>
+                </div>
+
+                <ul class="link-list">
+                  <li><a href="/" class="front active">front</a></li>
+                  <li><a href="/" class="right">right</a></li>
+                  <li><a href="/" class="back">back</a></li>
+                  <li><a href="/" class="left">left</a></li>
+                </ul>
+              </div>
+
+              <div class="selector-holder clothing">
+                <ul class="body-parts-selector">
+                  <li data-part-name="shirt" class='active shirt'>
+                    <a class="category">shirt</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Smart shirt" src="images/hipster-assets/shirt-03-thumb.png" title="Smart shirt" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="shirt" data-source-url="images/hipster-assets/shirt-03-black.png" name="hipster[shirt_id]" type="radio" value="202" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#112139">
+                                <input data-part-type="shirt" data-source-url="images/hipster-assets/shirt-03-blue.png" name="hipster[shirt_id]" type="radio" value="204" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Plain shirt" src="images/hipster-assets/shirt-02-thumb.png" title="Plain shirt" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#66308e">
+                                <input data-part-type="shirt" data-source-url="images/hipster-assets/shirt-02-purple.png" name="hipster[shirt_id]" type="radio" value="222" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#009444">
+                                <input data-part-type="shirt" data-source-url="images/hipster-assets/shirt-02-green.png" name="hipster[shirt_id]" type="radio" value="224" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="shirt" data-source-url="images/hipster-assets/shirt-02-black.png" name="hipster[shirt_id]" type="radio" value="232" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Dotted shirt" src="images/hipster-assets/shirt-04-thumb.png" title="Dotted shirt" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#282660">
+                                <input data-part-type="shirt" data-source-url="images/hipster-assets/shirt-04-blue.png" name="hipster[shirt_id]" type="radio" value="228" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#ea2127">
+                                <input data-part-type="shirt" data-source-url="images/hipster-assets/shirt-04-red.png" name="hipster[shirt_id]" type="radio" value="226" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Checkered shirt" src="images/hipster-assets/shirt-01-thumb.png" title="Checkered shirt" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#b4b5b7">
+                                <input data-part-type="shirt" data-source-url="images/hipster-assets/shirt-01.png" name="hipster[shirt_id]" type="radio" value="580" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Foldable.me shirt" src="images/hipster-assets/shirt-05-thumb.png" title="Foldable.me shirt" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#f5f5f5">
+                                <input checked="checked" data-part-type="shirt" data-source-url="images/hipster-assets/shirt-05-white.png" name="hipster[shirt_id]" type="radio" value="580" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-part-name="trousers" class="trousers">
+                    <a class="category">trousers</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Smart trousers" src="images/hipster-assets/trousers-01-thumb.png" title="Smart trousers" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#5c7254">
+                                <input data-part-type="trousers" data-source-url="images/hipster-assets/trousers-01-green.png" name="hipster[trousers_id]" type="radio" value="206" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#121d2b">
+                                <input checked="checked" data-part-type="trousers" data-source-url="images/hipster-assets/trousers-01-blue.png" name="hipster[trousers_id]" type="radio" value="208" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#2a2b2a">
+                                <input data-part-type="trousers" data-source-url="images/hipster-assets/trousers-01-grey.png" name="hipster[trousers_id]" type="radio" value="210" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Skirt 1" src="images/hipster-assets/skirt-01-thumb.png" title="Skirt 1" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#2a2b2a">
+                                <input data-part-type="trousers" data-source-url="images/hipster-assets/skirt-01-grey.png" name="hipster[trousers_id]" type="radio" value="212" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="trousers" data-source-url="images/hipster-assets/skirt-01-black.png" name="hipster[trousers_id]" type="radio" value="214" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#66308e">
+                                <input data-part-type="trousers" data-source-url="images/hipster-assets/skirt-01-purple.png" name="hipster[trousers_id]" type="radio" value="216" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Skirt 2" src="images/hipster-assets/skirt-02-thumb.png" title="Skirt 2" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#282660">
+                                <input data-part-type="trousers" data-source-url="images/hipster-assets/skirt-02-blue.png" name="hipster[trousers_id]" type="radio" value="218" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#FFFFFF">
+                                <input data-part-type="trousers" data-source-url="images/hipster-assets/skirt-02-white.png" name="hipster[trousers_id]" type="radio" value="220" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-part-name="eyewear" class="eyewear">
+                    <a class="category">eyewear</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Glasses hipster" src="images/hipster-assets/eyewear-01-thumb.png" title="Glasses hipster" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-01-black.png" name="hipster[eyewear_id]" type="radio" value="272" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#939393">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-01-grey.png" name="hipster[eyewear_id]" type="radio" value="274" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#ed1c24">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-01-red.png" name="hipster[eyewear_id]" type="radio" value="276" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Glasses no frame" src="images/hipster-assets/eyewear-02-thumb.png" title="Glasses no frame" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-02-black.png" name="hipster[eyewear_id]" type="radio" value="278" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#939393">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-02-grey.png" name="hipster[eyewear_id]" type="radio" value="280" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#ed1c24">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-02-red.png" name="hipster[eyewear_id]" type="radio" value="282" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#f1f1f1">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-02-white.png" name="hipster[eyewear_id]" type="radio" value="284" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="Glasses square" src="images/hipster-assets/eyewear-03-thumb.png" title="Glasses square" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-03-black.png" name="hipster[eyewear_id]" type="radio" value="286" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#939393">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-03-grey.png" name="hipster[eyewear_id]" type="radio" value="288" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#ed1c24">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-03-red.png" name="hipster[eyewear_id]" type="radio" value="290" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#f1f1f1">
+                                <input data-part-type="eyewear" data-source-url="images/hipster-assets/eyewear-03-white.png" name="hipster[eyewear_id]" type="radio" value="292" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <img alt="none" src="images/hipster-assets/none-thumb.png" title="none" />
+                        <ul class="part-colors">
+                          <li>
+                            <label style="background-color:transparent">
+                              <input data-part-type="eyewear" data-source-url="" name="hipster[eyewear_id]" type="radio" value="286" />
+                            </label>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li data-part-name="footwear" class="footwear">
+                    <a class="category">footwear</a>
+                    <ul class="part-elements">
+                      <li>
+                        <img alt="Shoes" src="images/hipster-assets/shoes-01-thumb.png" title="Shoes" />
+                        <ul class="part-colors">
+                            <li>
+                              <label style="background-color:#000000">
+                                <input checked="checked" data-part-type="footwear" data-source-url="images/hipster-assets/shoes-01-black.png" name="hipster[footwear_id]" type="radio" value="372" />
+                              </label>
+                            </li>
+                            <li>
+                              <label style="background-color:#A87C4F">
+                                <input data-part-type="footwear" data-source-url="images/hipster-assets/shoes-01-brown.png" name="hipster[footwear_id]" type="radio" value="374" />
+                              </label>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="scroll-control">
+                  <a href="/" class="down">down</a>
+                  <a href="/" class="up">up</a>
+                </div>
+                <div class="color-holder"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascripts/modernizr.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="javascripts/application.js" type="text/javascript"></script>
+  </body>
+</html>
