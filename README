@@ -1,0 +1,7 @@
+3D CSS transform demo of the foldable avatar builder used in Foldable.me.
+
+This tool enables you to customize a 3D foldable paper avatar, and is used in an actual production site!
+You can rotate the model by pressing the arrow keys or click-and-drag with your mouse.
+When the user's browser doesn't support CSS 3D transforms (check performed by Modernizr), the model is still
+usable in 2D, and can be rotate by clicking the buttons below it.
+
