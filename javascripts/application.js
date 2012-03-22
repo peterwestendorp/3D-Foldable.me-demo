@@ -49,42 +49,6 @@
     }
   });
 
-  // model rotation on mouse 'drag'
-  $hipsterPreview.on("mousedown", function() {
-    var oldPos;
-    oldPos = 0;
-    $(this).on("mousemove", function(e) {
-      if(e.clientX > oldPos + 50) {
-        // drag right
-        yAngle += 30;
-      }
-      else if(e.clientX < oldPos - 50) {
-        // drag left
-        yAngle -= 30;
-      }
-      else {
-        return;
-      }
-
-      if(!isAnimating) {
-        $dude[0].style[property] = "rotateX(0) rotateY(" + yAngle + "deg)";
-      }
-      return oldPos = e.clientX;
-    });
-
-    return $(document).on("mouseout", function(e) {
-      // disconnect mousemove eventlistener
-      if(e.target.nodeName === "HTML") {
-        return $hipsterPreview.off("mousemove");
-      }
-    });
-  });
-
-  $body3d.on("mouseup", function() {
-    // disconnect mousemove eventlistener
-    return $hipsterPreview.off("mousemove");
-  });
-
   // rotate model on click on rotate buttons
   changeSides = function(e) {
     e.preventDefault();

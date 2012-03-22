@@ -331,7 +331,6 @@ body#hipsters-new div#site-body {
   border:1px solid #d5d5d5;
   border-bottom:1px solid #FFFFFF;
   box-shadow:inset 0px 0px 7px #d5d5d5;
-  cursor:move;
 }
 .hipster-holder p.instructions {
   display: none;
