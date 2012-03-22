@@ -30,10 +30,6 @@
     if(typeof el.style[prop] !== "undefined") property = prop;
   }
 
-  $dude.on("transitionend webkitTransitionEnd", function() {
-    return isAnimating = false;
-  });
-
   // model rotation on arrow key down
   $body3d.on("keydown", function(e) {
     if(!isAnimating) {
@@ -46,6 +42,10 @@
           yAngle += 89.9;
       }
       return $dude[0].style[property] = "rotateX(0) rotateY(" + yAngle + "deg)";
+
+      setTimeout(function(){
+        isAnimating = false;
+      }, 1000);
     }
   });
 
