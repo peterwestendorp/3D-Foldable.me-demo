@@ -40,10 +40,10 @@
       isAnimating = true;
       switch (e.keyCode) {
         case 37:
-          yAngle -= 60;
+          yAngle -= 179.9;
           break;
         case 39:
-          yAngle += 60;
+          yAngle += 179.9;
       }
       return $dude[0].style[property] = "rotateX(0) rotateY(" + yAngle + "deg)";
     }

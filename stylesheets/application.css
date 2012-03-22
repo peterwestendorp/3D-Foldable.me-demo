@@ -25,12 +25,15 @@ dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,
 .csstransforms3d .hipster-holder p.instructions {
   position: absolute;
   bottom:0;
-  left:0;
+  left:100px;
   display: block;
-  width:100%;
+  width:160px;
   margin-bottom: 1em;
+  padding-left: 100px;
   font-family:'Helvetica Neue', Helvetica, sans-serif;
   text-align: center;
+  line-height:26px;
+  background:url(../images/keyboard-arrows.png) no-repeat 0 0;
   color: #555555;
 }
 
