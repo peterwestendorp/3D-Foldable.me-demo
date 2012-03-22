@@ -41,7 +41,7 @@
         case 39:
           yAngle += 89.9;
       }
-      return $dude[0].style[property] = "rotateX(0) rotateY(" + yAngle + "deg)";
+      $dude[0].style[property] = "rotateX(0) rotateY(" + yAngle + "deg)";
 
       setTimeout(function(){
         isAnimating = false;
