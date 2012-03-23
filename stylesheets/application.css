@@ -27,14 +27,14 @@ dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,
   bottom:0;
   left:100px;
   display: block;
-  width:160px;
+  width:155px;
   margin-bottom: 1em;
   padding-left: 100px;
   font-family:'Helvetica Neue', Helvetica, sans-serif;
   text-align: center;
-  line-height:26px;
+  line-height:21px;
   background:url(../images/keyboard-arrows.png) no-repeat 0 0;
-  color: #555555;
+  color: #BABABA;
 }
 
 .csstransforms3d .hipster-preview .hipster {
@@ -614,6 +614,10 @@ body#hipsters-new div#site-body {
 }
 .hipster-preview #hipster-arm-right .right {
   background-position:-1435px -944px;
+    -o-transform:     rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    -moz-transform:   rotate(45deg);
+  transform:          rotate(45deg);
 }
 .hipster-preview #hipster-arm-left .back {
   background-position:-133px -164px;
@@ -623,6 +627,10 @@ body#hipsters-new div#site-body {
 }
 .hipster-preview #hipster-arm-left .left {
   background-position:-204px -164px;
+    -o-transform:     rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:   rotate(-45deg);
+  transform:          rotate(-45deg);
 }
 .hipster-preview #hipster-arm-left .bottom {
   background-position:-204px -298px;
