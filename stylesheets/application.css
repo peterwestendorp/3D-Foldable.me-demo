@@ -13,9 +13,9 @@ dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,
     -moz-perspective:     1600px;
   perspective:            1600px;
 
-    -webkit-perspective-origin: 50% 290px;
-    -moz-perspective-origin:    50% 0px;
-  perspective-origin:           50% 290px;
+     -webkit-perspective-origin: 50% 300px; /*50% 290px;*/
+    -moz-perspective-origin:    50% 300px; /*50% 0px;*/
+  perspective-origin:           50% 300px; /*50% 290px;*/
 
     -webkit-backface-visibility:  hidden;
     -moz-backface-visibility:     hidden;
@@ -27,41 +27,70 @@ dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,
   bottom:0;
   left:100px;
   display: block;
-  width:155px;
-  margin-bottom: 1em;
-  padding-left: 100px;
+  width:255px;
+  padding: 1em 0;
   font-family:'Helvetica Neue', Helvetica, sans-serif;
   text-align: center;
   line-height:21px;
-  background:url(../images/keyboard-arrows.png) no-repeat 0 0;
   color: #BABABA;
+  cursor: default;
+  z-index:9;
+}
+.csstransforms3d body#hipsters-preview .hipster-holder p.instructions {
+  left:125px;
+}
+.csstransforms3d .hipster-holder p.instructions a.left,
+.csstransforms3d .hipster-holder p.instructions a.right {
+  display: inline-block;
+  width:41px;
+  height:20px;
+  margin-right: 5px;
+  text-indent: -999999em;
+  background:url(../images/keyboard-arrows.png) no-repeat 0 0;
+}
+.csstransforms3d .hipster-holder p.instructions a.right {
+  background-position:-50px 0;
 }
 
 .csstransforms3d .hipster-preview .hipster {
-    -webkit-transition:   -webkit-transform 1s ease-out;
-    -moz-transition:      -moz-transform    1s ease-out;
-  transition:           transform           1s ease-out;
-
     -webkit-transform-style:  preserve-3d;
     -moz-transform-style:     preserve-3d;
   transform-style:            preserve-3d;
 
-    -webkit-transform:rotateY(-30deg) rotateX(0);
-    -moz-transform:   rotateY(-30deg) rotateX(0);
-  transform:          rotateY(-30deg) rotateX(0);
+    -webkit-transform:rotateX(-15deg) rotateY(0deg);
+    -moz-transform:   rotateX(-15deg) rotateY(0deg);
+  transform:          rotateX(-15deg) rotateY(0deg);
+
+    -webkit-backface-visibility:  hidden;
+    -moz-backface-visibility:     hidden;
+  backface-visibility:            hidden;
+
+    -webkit-transition:   -webkit-transform 1s ease-out;
+    -moz-transition:      -moz-transform    1s ease-out;
+  transition:           transform           1s ease-out;
+
 }
 
-.csstransforms3d .hipster-preview * {
+.csstransforms3d .hipster-preview .cube {
+    -webkit-backface-visibility:  hidden;
+    -moz-backface-visibility:     hidden;
+  backface-visibility:            hidden;
+
+    -webkit-transform-style:  preserve-3d;
+    -moz-transform-style:     preserve-3d;
+  transform-style:            preserve-3d;
+}
+
+.csstransforms3d .hipster-preview .surface {
+  position: absolute;
     -webkit-backface-visibility:  hidden;
     -moz-backface-visibility:     hidden;
   backface-visibility:            hidden;
 }
 
-.csstransforms3d .hipster-preview .surface {
-  position: absolute;
+.csstransforms3d .hipster-preview #hipster-head {
+  z-index:3;
 }
-
-.csstransforms3d .hipster-preview #hipster-head,
 .csstransforms3d .hipster-preview #hipster-head .surface {
   z-index:3;
 }
@@ -98,8 +127,8 @@ dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,
 
 .csstransforms3d .hipster-preview #hipster-body {
   margin: 0 auto;
+  z-index:1;
 }
-.csstransforms3d .hipster-preview #hipster-body,
 .csstransforms3d .hipster-preview #hipster-body .surface {
   z-index:1;
 }
@@ -135,19 +164,21 @@ dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,
   transform:            rotateX(-90deg) rotate(180deg) translateZ(95px);
 }
 
-.csstransforms3d .hipster-preview #hipster-arm-left {
-  position: static;
+.csstransforms3d .hipster-preview #hipster-arm-left,
+.csstransforms3d .hipster-preview #hipster-arm-right {
+  position: relative;
   top:auto;
-  left:auto;
-  margin: -175px 0 0 31px;
-
     -webkit-transform-style:  preserve-3d;
     -moz-transform-style:     preserve-3d;
   transform-style:            preserve-3d;
     -webkit-transform:rotateX(45deg);
     -moz-transform:   rotateX(45deg);
   transform:          rotateX(45deg);
-  z-index: 1;
+  z-index: 3;
+}
+.csstransforms3d .hipster-preview #hipster-arm-left {
+  left:auto;
+  margin: -175px 0 0 31px;
 }
 .csstransforms3d .hipster-preview #hipster-arm-left .surface,
 .csstransforms3d .hipster-preview #hipster-arm-right .surface {
@@ -167,21 +198,21 @@ dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,
 }
 .csstransforms3d .hipster-preview #hipster-arm-left .right,
 .csstransforms3d .hipster-preview #hipster-arm-right .right {
-    -webkit-transform:  rotateY(90deg) translateZ(37px);
-    -moz-transform:     rotateY(90deg) translateZ(37px);
-  transform:            rotateY(90deg) translateZ(37px);
+    -webkit-transform:  rotateY(90deg) translateZ(36px);
+    -moz-transform:     rotateY(90deg) translateZ(36px);
+  transform:            rotateY(90deg) translateZ(36px);
 }
 .csstransforms3d .hipster-preview #hipster-arm-left .back,
 .csstransforms3d .hipster-preview #hipster-arm-right .back {
-    -webkit-transform:  rotateY(180deg) translateZ(37px);
-    -moz-transform:     rotateY(180deg) translateZ(37px);
-  transform:            rotateY(180deg) translateZ(37px);
+    -webkit-transform:  rotateY(180deg) translateZ(36px);
+    -moz-transform:     rotateY(180deg) translateZ(36px);
+  transform:            rotateY(180deg) translateZ(36px);
 }
 .csstransforms3d .hipster-preview #hipster-arm-left .left,
 .csstransforms3d .hipster-preview #hipster-arm-right .left {
-    -webkit-transform:  rotateY(-90deg) translateZ(37px);
-    -moz-transform:     rotateY(-90deg) translateZ(37px);
-  transform:            rotateY(-90deg) translateZ(37px);
+    -webkit-transform:  rotateY(-90deg) translateZ(36px);
+    -moz-transform:     rotateY(-90deg) translateZ(36px);
+  transform:            rotateY(-90deg) translateZ(36px);
 }
 .csstransforms3d .hipster-preview #hipster-arm-left .bottom {
     -webkit-transform:  rotateX(-90deg) translateZ(100px) rotate(270deg);
@@ -195,24 +226,14 @@ dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,
 }
 
 .csstransforms3d .hipster-preview #hipster-arm-right {
-  position: static;
-  top:auto;
   right:auto;
   margin: -136px 0 0 296px;
-
-    -webkit-transform-style:  preserve-3d;
-    -moz-transform-style:     preserve-3d;
-  transform-style:            preserve-3d;
-    -webkit-transform:rotateX(45deg);
-    -moz-transform:   rotateX(45deg);
-  transform:          rotateX(45deg);
-  z-index: 1;
 }
 
 .csstransforms3d .hipster-preview #hipster-feet {
   margin-top: 25px;
+  z-index:0;
 }
-.csstransforms3d .hipster-preview #hipster-feet,
 .csstransforms3d .hipster-preview #hipster-feet .surface {
   z-index:0;
 }

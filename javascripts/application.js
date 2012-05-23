@@ -13,6 +13,7 @@
       cssTransforms = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' '),
       disconnectScroll,
       el = document.createElement('div'),
+      has3DSupport = false,
       isAnimating = false,
       parts = [],
       prop,
@@ -30,58 +31,91 @@
     if(typeof el.style[prop] !== "undefined") property = prop;
   }
 
-  // model rotation on arrow key down
-  $body3d.on("keydown", function(e) {
-    if(!isAnimating) {
-      isAnimating = true;
-      switch (e.keyCode) {
-        case 37:
-          yAngle -= 90;
-          break;
-        case 39:
-          yAngle += 90;
+  if($("html.csstransforms3d body").length > 0){
+    has3DSupport = true;
+  }
+
+
+  if(has3DSupport){
+    setTimeout(function(){
+      $dude[0].style[property] = "rotateX(-15deg) rotateY("+yAngle+"deg)";
+    },2000);
+
+    // model rotation on arrow key down
+    $body3d.on("keydown", function(e) {
+      if(!isAnimating) {
+        isAnimating = true;
+        switch (e.keyCode) {
+          case 37:
+            yAngle -= 90;
+            break;
+          case 39:
+            yAngle += 90;
+        }
+        $dude[0].style[property] = "rotateX(-15deg) rotateY(" + yAngle + "deg)";
+
+        setTimeout(function(){
+          isAnimating = false;
+        }, 1000);
       }
-      $dude[0].style[property] = "rotateX(0) rotateY(" + yAngle + "deg)";
+    });
 
-      setTimeout(function(){
-        isAnimating = false;
-      }, 1000);
-    }
-  });
+    $(".hipster-preview p.instructions a").on("click", function(e){
+        e.preventDefault();
 
-  // rotate model on click on rotate buttons
-  changeSides = function(e) {
-    e.preventDefault();
+        if(!isAnimating){
+          isAnimating = true;
 
-    var $target = $(e.target);
-    yAngle = 360 * Math.round(yAngle / 360);
+          if($(this).hasClass("left")){
+            yAngle -= 60; //left
+          }
 
-    $links.removeClass("active");
-    $target.addClass("active");
-    $dude.removeClass("front back left right");
+          else if($(this).hasClass("right")){
+            yAngle += 60; //right
+          }
 
-    if($target.hasClass("front")) {
-      $dude.addClass("front");
-      yAngle = yAngle - 30;
-      $dude[0].style[property] = "rotateX(0) rotateY(" + yAngle + "deg)";
-    }
-    if($target.hasClass("back")) {
-      $dude.addClass("back");
-      yAngle = yAngle - 210;
-      $dude[0].style[property] = "rotateX(0) rotateY(" + yAngle + "deg)";
-    }
-    if($target.hasClass("right")) {
-      $dude.addClass("right");
-      yAngle = yAngle - 120;
-      $dude[0].style[property] = "rotateX(0) rotateY(" + yAngle + "deg)";
-    }
-    if($target.hasClass("left")) {
-      $dude.addClass("left");
-      yAngle = yAngle - 300;
-      $dude[0].style[property] = "rotateX(0) rotateY(" + yAngle + "deg)";
-    }
-  };
-  $links.on("click", changeSides);
+          $dude[0].style[property] = "rotateX(-15deg) rotateY("+yAngle+"deg)";
+
+          setTimeout(function(){
+            isAnimating = false;
+          }, 1000);
+        }
+    });
+
+    // rotate model on click on rotate buttons
+    changeSides = function(e) {
+      e.preventDefault();
+
+      var $target = $(e.target);
+      yAngle = 360 * Math.round(yAngle / 360);
+
+      $links.removeClass("active");
+      $target.addClass("active");
+      $dude.removeClass("front back left right");
+
+      if($target.hasClass("front")) {
+        $dude.addClass("front");
+        yAngle = yAngle - 30;
+        $dude[0].style[property] = "rotateX(-15deg) rotateY(" + yAngle + "deg)";
+      }
+      if($target.hasClass("back")) {
+        $dude.addClass("back");
+        yAngle = yAngle - 210;
+        $dude[0].style[property] = "rotateX(-15deg) rotateY(" + yAngle + "deg)";
+      }
+      if($target.hasClass("right")) {
+        $dude.addClass("right");
+        yAngle = yAngle - 120;
+        $dude[0].style[property] = "rotateX(-15deg) rotateY(" + yAngle + "deg)";
+      }
+      if($target.hasClass("left")) {
+        $dude.addClass("left");
+        yAngle = yAngle - 300;
+        $dude[0].style[property] = "rotateX(-15deg) rotateY(" + yAngle + "deg)";
+      }
+    };
+    $links.on("click", changeSides);
+  }
 
   // set selected bodypart on model
   setBodyPart = function($radioBtn) {
